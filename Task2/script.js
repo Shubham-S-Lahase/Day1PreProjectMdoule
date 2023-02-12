@@ -1,4 +1,4 @@
-const container = document.getElementById("container");
+
 function getcolor(){
     const colorArray = [
         "#000000",
@@ -26,20 +26,26 @@ function getcolor(){
 }
 
 function changeColor() {
+    let container = document.getElementById("container");
     let color = getcolor();
     // console.log(color);
      container.style.backgroundColor = color;
 }
+
 let elementNode =  document.createElement("div");
+elementNode.style.border = "1px solid black";
+elementNode.style.textAlign = "center";
+elementNode.style.width = "300px";
+elementNode.style.height = "300px";
+elementNode.style.margin = "auto";
 function addChild() {
-        elementNode.style.border = "1px solid black";
-        elementNode.style.textAlign = "center";
-        elementNode.style.width = "300px";
-        elementNode.style.height = "300px";
-        elementNode.style.margin = "auto";
-        container.appendChild(elementNode);
+    let container = document.getElementById("container");
+    container.appendChild(elementNode);
 }
+
+
 function removeChild(){
-    elementNode.remove();
+    let container = document.getElementById("container");
+    container.removeChild(elementNode);
 }
 
