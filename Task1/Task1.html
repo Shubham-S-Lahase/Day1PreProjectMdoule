@@ -1,0 +1,42 @@
+<!DOCTYPE html> // According to Document Object Model(DOM), every element or HTML tag is an object of the Document.
+<html lang="en"> ----------------------->Parent(Root) Node(element)
+    Nested tags are "children" of te enclosing one.
+    Three kinds of tags mostly use in DOM: Element nodes, Text nodes, Comment nodes
+    Tags are element nodes (or just elements) and form the tree structure: <html> is at the root, then <head> and <body> are its children, etc.
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1-DOM Nodes & Relations</title> ------------------->(Element Node)
+    Element node can be created using Dom method, "document.createElement()"
+</head>
+<body>
+    <div id="first-body-child"> ------------------------->(parent)
+        <p>I am the text of Paragraph</p>-------------------->(children)
+        <p>I am the second children off my parent element div whose tag is first-body-child</p>
+        I am free text in the div. ------------------------->(Text Node)
+        The text enclosed in the html tags is also a text node(it can be created using Dom method "document.createTextNode")
+        <!-- The text node rarely have any child, its always the leaf node of the DOM tree -->
+        
+        <!-- a comment node -->
+        
+        <div id="getdiv">
+            <input id="input" type="text">
+            <button onclick="getval">Click Me</button>
+        </div>
+    </div>
+    <script>
+        let Inputvalue = document.getElementById("input").value;
+        function getval(){
+            return (Inputvalue);
+            let node = document.createElement("h1");
+            let textnode = document.createTextNode("I am the textnode created by manipulating dom");
+            node.appendChild(textnode);
+            document.getElementById("getdiv").appendChild(node);
+        }
+        // The above function is executed upon the click event on the button, and created a text node 
+        // and append it to the newly created element node "h1", and then the element node is appended 
+        // to another element node, by accessing it through its id.
+    </script>
+</body>
+</html>

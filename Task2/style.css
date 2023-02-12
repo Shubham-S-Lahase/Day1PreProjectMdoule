@@ -1,0 +1,20 @@
+#container{
+    display: flex;
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+    margin: 10px auto;
+}
+#buttonContainer{
+    width: fit-content;
+    padding: 5px;
+    margin: 2px auto;
+}
+#buttonContainer button{
+    background-color: black;
+    color: chartreuse;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 3px;
+}
